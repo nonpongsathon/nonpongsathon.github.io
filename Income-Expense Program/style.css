@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    margin:0;
+    width:100%;
+    background-color: #dedede;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+}
+
+.income-expense-container {
+    background-color: #fff;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:auto 30px;
+    padding:15px 0;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px #555555;
+}
+
+.money-plus {
+    color:green;
+}
+
+.money-minus {
+    color:red;
+}
+
+
+.history h3, .addTransaction h3 {
+    padding:10px;
+    border-bottom: 2px solid #555;
+}
+
+.list {
+    padding:0;
+    list-style-type: none;
+}
+
+.list li {
+    background-color: #fff;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:5px 0;
+    position:relative;
+    box-shadow: 0 2px 2px #555555;
+
+}
+
+.list li button {
+    position:absolute;
+    bottom:0;
+    left:0;
+    transform: translate(-120%, -50%);
+    color:#fff;
+    background-color: red;
+    font-weight: bold;
+    cursor: pointer;
+    opacity:0;
+}
+
+.list li:hover button {
+    opacity:1;
+}
+
+.list li p {
+    padding:2px 15px;
+}
+
+.plus {
+    border-right:8px solid green;
+}
+
+.minus {
+    border-right:8px solid red;
+}
+
+label {
+    display:block;
+    margin:5px auto;
+}
+
+input[type='text'], input[type='number'] {
+    width:100%;
+    padding:10px;
+    outline:0;
+    font-size:1rem;
+}
+
+.btn {
+    display: block;
+    background-color: purple;
+    margin:15px auto;
+    width:50%;
+    padding:15px;
+    color:#fff;
+    font-size:1.5rem;
+    cursor:pointer;
+}

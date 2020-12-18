@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    margin:0;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+img {
+    width:50%;
+}
+
+.container {
+    width:50%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.currency-container, .swap-container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px 0;
+}
+
+.currency1, .currency2 {
+    font-size:2rem;
+}
+
+.amount1, .amount2 {
+    font-size:1.5rem;
+    border:0;
+    text-align:right;
+    outline:none;
+}
+
+.btn {
+    background-color: purple;
+    padding:10px;
+    color:#fff;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.btn:active {
+    transform: scale(0.90);
+}
+
+.rate {
+    font-size:1.3rem;
+}
