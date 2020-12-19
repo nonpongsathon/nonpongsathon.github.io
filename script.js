@@ -14,20 +14,20 @@ function swapMode(e) {
     }
 }
 
-function darkMode(mode) {
+function darkMode(status) {
     document.documentElement.setAttribute('theme', 'dark');
     mode.innerText = 'โหมดกลางคืน';
     icon.classList.replace('fa-sun', 'fa-moon');
-    imageCurrencyExchange.src = `/image/undraw_Bitcoin_P2P_${mode}.svg`;
-    imageIncomeExpense.src = `/image/undraw_Payments_${mode}.svg`;
+    imageCurrencyExchange.src = `/image/undraw_Bitcoin_P2P_${status}.svg`;
+    imageIncomeExpense.src = `/image/undraw_Payments_${status}.svg`;
 
 }
 
-function lightMode(mode) {
+function lightMode(status) {
     document.documentElement.setAttribute('theme', 'light');
     mode.innerText = 'โหมดกลางวัน';
     icon.classList.replace('fa-moon', 'fa-sun');
-    imageCurrencyExchange.src = `/image/undraw_Bitcoin_P2P_${mode}.svg`;
-    imageIncomeExpense.src = `/image/undraw_Payments_${mode}.svg`;
+    imageCurrencyExchange.src = `/image/undraw_Bitcoin_P2P_${status}.svg`;
+    imageIncomeExpense.src = `/image/undraw_Payments_${status}.svg`;
 
 }
