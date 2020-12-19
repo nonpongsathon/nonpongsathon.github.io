@@ -278,6 +278,11 @@ section {
         text-align:center;
     }
 
+    .project {
+        display:flex;
+        flex-direction: column;
+    }
+
     .project h1 {
         font-size: 2rem;
         margin:20px auto;
