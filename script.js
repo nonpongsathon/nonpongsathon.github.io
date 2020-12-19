@@ -4,7 +4,7 @@ const switchToggle = document.querySelector("input[type = 'checkbox']");
 const imageCurrencyExchange = document.querySelector('#image-currency-exchange');
 const imageIncomeExpense = document.querySelector('#image-income-expense');
 
-switchToggle.addEventListener('change',swapMode);
+switchToggle.addEventListener('change', swapMode);
 
 function swapMode(e) {
     if (e.target.checked) {
@@ -14,8 +14,8 @@ function swapMode(e) {
     }
 }
 
-function  darkMode(mode) {
-    document.documentElement.setAttribute('theme','dark');
+function darkMode(mode) {
+    document.documentElement.setAttribute('theme', 'dark');
     mode.innerText = 'โหมดกลางคืน';
     icon.classList.replace('fa-sun', 'fa-moon');
     imageCurrencyExchange.src = `/image/undraw_Bitcoin_P2P_${mode}.svg`;
@@ -24,10 +24,10 @@ function  darkMode(mode) {
 }
 
 function lightMode(mode) {
-    document.documentElement.setAttribute('theme','light');
+    document.documentElement.setAttribute('theme', 'light');
     mode.innerText = 'โหมดกลางวัน';
     icon.classList.replace('fa-moon', 'fa-sun');
     imageCurrencyExchange.src = `/image/undraw_Bitcoin_P2P_${mode}.svg`;
     imageIncomeExpense.src = `/image/undraw_Payments_${mode}.svg`;
-    
+
 }
