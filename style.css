@@ -47,7 +47,7 @@ body {
     position:relative;
 }
 
-input[type = 'checkbox'] {
+.mode-switch {
     display:none;
 }
 
@@ -57,7 +57,7 @@ input[type = 'checkbox'] {
     left:0;
     right:0;
     bottom:0;
-    background-color:var(--main-color);
+    background:var(--main-color);
     border-radius: 50px;
     cursor:pointer;
 }
@@ -74,15 +74,32 @@ input[type = 'checkbox'] {
     transition:0.4s ease-in-out;
 }
 
-input:checked + .slider::before {
+.mode-switch:checked + .slider::before {
     transform: translateX(28px);
 }
 
 nav {
+    display:flex;
+    align-items: center;
     position:fixed;
     top:25px;
     left:25px;
-    background: transparent;
+}
+
+#menu {
+    display:none;
+}
+
+.menu-content {
+    padding:0;
+    margin:0;
+}
+
+.menu-content ul {
+    list-style-type: none;
+    padding:0;
+    display:flex;
+    align-items: center;
 }
 
 nav a {
@@ -99,6 +116,9 @@ nav a:hover, nav a:focus {
     border-bottom: 2px solid var(--text-primary);
 }
 
+.collapsible-menu label {
+    display:none;
+}
 section {
     height:100vh;
     width:100vw;
@@ -143,7 +163,7 @@ section {
 
 .project-container div {
     width:40%;
-    height:50vh;
+    height:auto;
     padding:20px;
     font-size:1.5rem;
     background: var(--background);
@@ -154,9 +174,12 @@ section {
 }
 
 .project-container div a {
+    display:block;
     text-decoration: none;
     color:var(--text-secondary);
     margin:0;
+    width:100%;
+    height:50%;
 }
 
 .project-container div img {
@@ -184,4 +207,99 @@ section {
     color:var(--text-secondary);
 }
 
+@media only screen and (max-width:800px) {
+    
+    nav {
+        display:block;
+        position:fixed;
+        top:30px;
+        left:40px;
+        padding:0;
+    }
 
+    nav div img {
+        cursor:pointer;
+    }
+    
+    .menu-content ul{
+        display:list-item;
+        padding:0;
+        margin:0;
+    }
+
+    nav .menu-content a {
+        font-size: 1.3rem;
+        padding:0;
+    }
+
+    nav .menu-content li {
+        padding:20px 0;
+        background-color: var(--background);
+        margin:5px 0;
+        border: 2px solid #dedede;
+        border-radius: 30px;
+        text-align: center;
+        box-shadow: 0 2px 2px rgb(29, 29, 29);
+    }
+
+    #menu {
+        display:inline-block;
+    }
+
+    .collapsible-menu label {
+        display:block;
+        font-size:2rem;
+        color:var(--text-primary);
+        cursor:pointer;
+
+    }
+
+    input#menu {
+        display:none;
+    }
+    
+    .menu-content {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .collapsible-menu input:checked ~ .menu-content {
+        max-height:100;
+        overflow:visible;
+    }
+
+    .home h1 {
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .home h3 {
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .project h1 {
+        font-size: 2rem;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .project-container div {
+        width:50%;
+        margin: 20px auto;
+    }
+
+    .project-container h3 {
+        font-size:1.7rem;
+    }
+
+    .project-container img {
+        width:100%;
+        height:100%;
+    }
+
+    
+}

@@ -1,6 +1,6 @@
 const mode = document.querySelector('#mode');
 const icon = document.querySelector('.fa-sun');
-const switchToggle = document.querySelector("input[type = 'checkbox']");
+const switchToggle = document.querySelector(".mode-switch");
 const imageCurrencyExchange = document.querySelector('#image-currency-exchange');
 const imageIncomeExpense = document.querySelector('#image-income-expense');
 

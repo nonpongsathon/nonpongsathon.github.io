@@ -11,21 +11,31 @@
 </head>
 
 <body>
+
     <div class="theme-switch-container">
         <span class="switch-text">
             <span id='mode'>โหมดกลางวัน</span>
             <i class="fas fa-sun"></i>
         </span>
         <label class='switch-bar'>
-            <input type="checkbox">
+            <input type="checkbox" class='mode-switch'>
             <div class="slider"></div>
         </label>
     </div>
     <nav>
-        <a href="#home">หน้าแรก</a>
-        <a href="#project">ผลงานโปรเจค</a>
-        <a href="#contact">ช่องทางการติดต่อ</a>
+        <div class="collapsible-menu">
+            <input type="checkbox" id='menu'>
+            <label for="menu"><i class="fas fa-bars"></i></label>
+            <div class="menu-content">
+                <ul>
+                    <li><a href="#home">หน้าแรก</a></li>
+                    <li><a href="#project">ผลงานโปรเจค</a></li>
+                    <li><a href="#contact">ช่องทางการติดต่อ</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
     <section class="home" id="home">
         <h1>Hi, I'm Pongsathon Neesanan</h1>
         <h3>You can call me Non. Nice to meet you!</h3>
