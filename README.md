@@ -1,3 +1,3 @@
-#Project: Profile webpage  
-##Developer: Pongsathon Neesanan
-##Resource: HTML, CSS, Javascript
+Project: Profile webpage  
+Developer: Pongsathon Neesanan
+Resource: HTML, CSS, Javascript
